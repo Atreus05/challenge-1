@@ -57,7 +57,7 @@ function copiarTexto() {
     document.body.removeChild(textoTemporal);
 
     mensaje.innerText = "";
-    mensaje.style.backgroundImage = "url('imagenes/Hacker.png')";
+    mensaje.style.backgroundImage = "url('imagenes/hacker.png')";
 
     mensaje.innerHTML = `
         <div class="mensaje-texto" id="mensaje-texto">

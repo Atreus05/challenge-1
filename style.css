@@ -11,13 +11,16 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
+    scroll-behavior: smooth;
 }
 
 body {
     background: radial-gradient(circle at bottom, navy 0, black 100%);
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     box-sizing: border-box;
+    overflow-y: auto;
+    height: 100%;
   }
 .space {
     background: none center / 200px 200px round;
@@ -153,7 +156,7 @@ body {
     overflow: hidden;
 }
 
-header.encabezado{
+.encabezado{
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -163,8 +166,7 @@ header.encabezado{
 }
 
 .logo{
-    width: 25%; 
-    max-width: 10%; 
+    width: 200px;
     height: auto; 
 }
 .encabezado-texto{
@@ -198,6 +200,13 @@ header.encabezado{
   align-items: flex-start;
   padding: 20px;
   gap: 20px;
+}
+
+.ingresar-texto{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .text-area {
@@ -276,7 +285,9 @@ header.encabezado{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 336px;
+    width: 336px;
+    max-width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-between;
     
@@ -295,7 +306,7 @@ header.encabezado{
     position: relative;
     text-align: center;
     height: 400px;
-    width: 100%; 
+    width: 336px; 
     overflow-y: auto;
     display: flex;
     flex-direction: column; 
@@ -331,8 +342,8 @@ header.encabezado{
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    width: 336px;
-    margin-top: 17%;
+    width: 328px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -373,6 +384,83 @@ header.encabezado{
     margin-top: 0%;
 }
 
+@media(max-width: 1024px){
+  .cuerpo{
+    flex-wrap:wrap;
+  }
+  .texto-encriptado{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .boton-copiar{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media(max-width:400px){
+  .cuerpo{
+    padding: 0px;
+  }
+  .encabezado{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .encabezado-texto{
+    margin-top: -20px;
+  }
+  .ingresar-texto{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .text-area{
+    padding: 5px 10px;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .boton-encriptar{
+    width: 100%;
+    padding: 5px 10px;
+  }
+  .boton-desencriptar{
+    width:100%;
+    padding: 5px 10px;
+    margin: 0;
+  }
+  .boton-copiar{
+    width: 100%;
+    padding: 5px 10px;
+    margin-left: 0px;
+  }
+  .texto-encriptado{
+    margin-bottom: 20px;
+  }
+  .mensaje{
+    position: relative;
+  }
+  .mensaje-texto{
+    width: 100%;
+    padding: 10px;
+    left: -10px;
+  }
+  .mensaje-texto strong{
+    display: block;
+  }
+  .mensaje-texto p{
+    font-size: 14px;
+  }
+
+}
 
 
 
